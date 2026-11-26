@@ -8,8 +8,12 @@ from app.database.dependencies import get_db
 from app.repositories.policy_repository import PolicyRepository
 from app.storage.local_storage import LocalStorage
 from app.policy_extraction.services.policy_processor import PolicyProcessor
+from app.rating.services.rating_service import RatingService
+
 
 router = APIRouter(prefix="/api/v1/policies", tags=["Policies"])
+
+rating_service = RatingService()
 
 storage = LocalStorage()
 processor = PolicyProcessor()
@@ -42,11 +46,19 @@ async def extract_policy(
 
         repository.update_document_status(document, "processing")
 
+        # Extract and normalize policy details
         result = processor.process(storage_path)
 
         extraction_data = result["extraction"].model_dump(mode="json")
         normalized_data = result["normalized_policy"].model_dump(mode="json")
 
+        # Run Go Digit rating
+        rating = rating_service.rate(
+            source_id="godigit_mar_2026",
+            policy=result["normalized_policy"],
+        )
+
+        # Persist analysis
         analysis = repository.create_analysis(
             document_id=document.id,
             extracted_data=extraction_data,
@@ -62,6 +74,7 @@ async def extract_policy(
             "filename": document.original_filename,
             "policy": normalized_data,
             "extraction": extraction_data,
+            "rating": rating,
         }
 
     except HTTPException:
