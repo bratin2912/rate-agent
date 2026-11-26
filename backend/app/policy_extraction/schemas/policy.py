@@ -15,6 +15,12 @@ class VehicleDetails(BaseModel):
     engine_cc: int | None = None
     manufacture_year: int | None = None
     vehicle_age: int | None = None
+    vehicle_category: Literal[
+    "private_car",
+    "two_wheeler",
+    "commercial_vehicle",
+    "unknown",
+    ] = "unknown"
 
 
 class InsurerDetails(BaseModel):
@@ -68,3 +74,4 @@ class PolicyFieldEvidence(BaseModel):
 class PolicyExtractionResult(BaseModel):
     policy: PolicyDetails
     evidence: list[PolicyFieldEvidence] = Field(default_factory=list)
+

@@ -28,6 +28,12 @@ class NormalizedVehicle(BaseModel):
     engine_cc: int | None = None
     manufacture_year: int | None = None
     vehicle_age: int | None = None
+    vehicle_category: Literal[
+    "private_car",
+    "two_wheeler",
+    "commercial_vehicle",
+    "unknown",
+    ] = "unknown"
 
 
 class NormalizedInsurer(BaseModel):

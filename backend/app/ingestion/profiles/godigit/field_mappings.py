@@ -51,4 +51,19 @@ GODIGIT_FIELD_MAPPINGS = {
     "4W  RTO": {
         "RTO Code": "rto_code",
     },
+    
+    "4W  RTO": {
+        "RTO Code": "rto_code",
+        "4WTP": "four_wheeler_tp_cluster",
+        "4W Package": "four_wheeler_package_cluster",
+        "4WSAOD": "four_wheeler_saod_cluster",
+        "PLR Cluster": "plr_cluster",
+    },
+    "2W RTO's": {
+        "RTO_Code": "rto_code",
+        "2W_1+1 & SATP | Clusters": "two_wheeler_1plus1_satp_cluster",
+        "2W 1+5 & 5+5 | Clusters": "two_wheeler_1plus5_5plus5_cluster",
+        "2W_SAOD | Clusters": "two_wheeler_saod_cluster",
+    },
+
 }
