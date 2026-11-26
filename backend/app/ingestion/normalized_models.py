@@ -1,5 +1,4 @@
-
-from backend.app.ingestion.normalizer import (
+from app.ingestion.normalizer import (
     NormalizedField,
     NormalizedRecord,
     NormalizedTable,

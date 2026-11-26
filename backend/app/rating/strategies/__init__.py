@@ -1,1 +1,1 @@
-self.underwriting_evaluator = UnderwritingEvaluator()
+"""Rating strategy implementations."""

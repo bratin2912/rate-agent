@@ -1,10 +1,5 @@
-
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from pathlib import Path
-from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
-from sqlalchemy.orm import Session
-from fastapi.responses import FileResponse
 
 from app.models.policy import PolicyDocument, PolicyAnalysis
 
@@ -13,112 +8,73 @@ class PolicyRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    # Keep your existing create_document,
-    # update_document_status, create_analysis,
-    # and record_failure methods.
-
-    @router.get("/")
-    def list_policies(
-        limit: int = 20,
-        offset: int = 0,
-        db: Session = Depends(get_db),
-    ):
-        if not 1 <= limit <= 100 or offset < 0:
-            raise HTTPException(400, "Invalid pagination parameters.")
-    
-        repository = PolicyRepository(db)
-        documents = repository.list_documents(limit, offset)
-    
-        return {
-            "items": [
-                {
-                    "document_id": document.id,
-                    "filename": document.original_filename,
-                    "status": document.status,
-                    "created_at": document.created_at,
-                }
-                for document in documents
-            ],
-            "limit": limit,
-            "offset": offset,
-        }
-    
-    
-    @router.get("/{document_id}")
-    def get_policy(
-        document_id: str,
-        db: Session = Depends(get_db),
-    ):
-        repository = PolicyRepository(db)
-        document = repository.get_document(document_id)
-    
-        if not document:
-            raise HTTPException(404, "Policy document not found.")
-    
-        analyses = repository.list_analyses(document_id)
-    
-        return {
-            "document_id": document.id,
-            "filename": document.original_filename,
-            "status": document.status,
-            "created_at": document.created_at,
-            "analyses": [
-                {
-                    "analysis_id": analysis.id,
-                    "status": analysis.status,
-                    "created_at": analysis.created_at,
-                }
-                for analysis in analyses
-            ],
-        }
-    
-    
-    @router.get("/{document_id}/document")
-    def get_original_document(
-        document_id: str,
-        db: Session = Depends(get_db),
-    ):
-        repository = PolicyRepository(db)
-        document = repository.get_document(document_id)
-    
-        if not document:
-            raise HTTPException(404, "Policy document not found.")
-    
-        path = Path(document.storage_path)
-    
-        if not path.is_file():
-            raise HTTPException(404, "Stored PDF not found.")
-    
-        return FileResponse(
-            path=path,
-            media_type="application/pdf",
-            filename=document.original_filename,
+    def create_document(self, filename: str, storage_path: str):
+        document = PolicyDocument(
+            original_filename=filename,
+            storage_path=storage_path,
+            status="uploaded",
         )
-    
-    
-    @router.get("/{document_id}/analyses/{analysis_id}")
-    def get_analysis_details(
-        document_id: str,
-        analysis_id: str,
-        db: Session = Depends(get_db),
+        self.db.add(document)
+        self.db.commit()
+        self.db.refresh(document)
+        return document
+
+    def update_document_status(self, document, status: str):
+        document.status = status
+        self.db.commit()
+        self.db.refresh(document)
+        return document
+
+    def create_analysis(
+        self,
+        document_id,
+        extracted_data: dict,
+        normalized_data: dict,
     ):
-        repository = PolicyRepository(db)
-    
-        document = repository.get_document(document_id)
-        if not document:
-            raise HTTPException(404, "Policy document not found.")
-    
-        analysis = repository.get_analysis(analysis_id)
-    
-        if not analysis or analysis.document_id != document_id:
-            raise HTTPException(404, "Policy analysis not found.")
-    
-        return {
-            "document_id": document.id,
-            "analysis_id": analysis.id,
-            "status": analysis.status,
-            "extracted_data": analysis.extracted_data,
-            "normalized_data": analysis.normalized_data,
-            "error_message": analysis.error_message,
-            "created_at": analysis.created_at,
-        }
+        analysis = PolicyAnalysis(
+            document_id=document_id,
+            extracted_data=extracted_data,
+            normalized_data=normalized_data,
+            status="completed",
+        )
+        self.db.add(analysis)
+        self.db.commit()
+        self.db.refresh(analysis)
+        return analysis
+
+    def record_failure(self, document, error_message: str):
+        document.status = "failed"
+
+        analysis = PolicyAnalysis(
+            document_id=document.id,
+            extracted_data={},
+            normalized_data={},
+            status="failed",
+            error_message=error_message,
+        )
+
+        self.db.add(analysis)
+        self.db.commit()
+
+    def list_documents(self, limit: int = 20, offset: int = 0):
+        statement = (
+            select(PolicyDocument)
+            .order_by(PolicyDocument.created_at.desc())
+            .limit(limit)
+            .offset(offset)
+        )
+        return self.db.scalars(statement).all()
+
+    def get_document(self, document_id):
+        return self.db.get(PolicyDocument, document_id)
+
+    def list_analyses(self, document_id):
+        statement = (
+            select(PolicyAnalysis)
+            .where(PolicyAnalysis.document_id == document_id)
+            .order_by(PolicyAnalysis.created_at.desc())
+        )
+        return self.db.scalars(statement).all()
+
+    def get_analysis(self, analysis_id):
+        return self.db.get(PolicyAnalysis, analysis_id)

@@ -1,9 +1,16 @@
 
+import re
+
 from app.policy_extraction.schemas.policy import PolicyExtractionResult
 
 
 class EvidenceValidator:
     """Validate extracted evidence against the original PDF text."""
+
+    @staticmethod
+    def _normalize_text(value: str) -> str:
+        """Normalize whitespace without changing meaningful characters."""
+        return re.sub(r"\s+", " ", value).strip().casefold()
 
     def validate(
         self,
@@ -35,11 +42,15 @@ class EvidenceValidator:
                 )
                 continue
 
-            if quote.casefold() not in page_text.casefold():
+            normalized_quote = self._normalize_text(quote)
+            normalized_page = self._normalize_text(page_text)
+
+            if normalized_quote not in normalized_page:
                 errors.append(
                     f"{evidence.field_path}: "
                     f"Evidence quote not found on page "
-                    f"{evidence.page_number}."
+                    f"{evidence.page_number}. "
+                    f"Quote: {quote!r}"
                 )
 
         return errors
