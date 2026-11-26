@@ -1,0 +1,2449 @@
+
+========== SOURCE INFORMATION ==========
+{
+  "source_id": "godigit_mar_2026",
+  "publisher": "Go Digit",
+  "version": "March 2026",
+  "file_type": "xlsx",
+  "original_filename": "Large Insurance Brokers Mar'26 - Shared.xlsx"
+}
+
+========== SHEET INSPECTION ==========
+
+======================================================================
+SHEET: CV Grid (excl. HCV)
+PRODUCT LINE: commercial_vehicle
+TABLE TYPE: commission_grid
+RECORD COUNT: 819
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Cluster
+  Sample values: ['UP Cluster 1', 'UP Cluster 1', 'UP Cluster 1', 'UP Cluster 1', 'UP Cluster 1']
+
+  Field: Segment
+  Sample values: ['GCV4 upto 1.6T 0-5 years', 'GCV4 upto 1.6T 6+ years', 'GCV4 upto 1.6-2T 0-5 years', 'GCV4 upto 1.6-2T 6+ years', 'GCV4 2T-2.5T 0-5 years']
+
+  Field: Make
+  Sample values: ['All', 'All', 'All', 'All', 'Non-TATA']
+
+  Field: Digit_FY 25-26 COMP | CD1
+  Sample values: [0.8, 0.8, 0.8, 0.8, 'D']
+
+  Field: Digit_FY 25-26 COMP | Max CD2
+  Sample values: ['D', 0.6, 'D', 0.59, 'D']
+
+  Field: Digit_FY 25-26 SATP | Max CD2
+  Sample values: [0.5, 0.6, 0.49, 0.59, 'D']
+
+  Field: Note
+  Sample values: ['all OEM except Hyundai', 'Body type CRANE is declined', 'For Good UP-1', 'For Good UP-2. Only cases of non-hypothecated would be unlocked as per U/W eligibility', 'Additional 2.5% CD2 can be offered to partners with volume of 10 Lac monthly.']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:CV Grid (excl. HCV):4",
+  "source_id": "godigit_mar_2026",
+  "product_line": "commercial_vehicle",
+  "table_type": "commission_grid",
+  "source_row": 4,
+  "fields": {
+    "Cluster": {
+      "canonical_name": null,
+      "source_header": "Cluster",
+      "raw_value": "UP Cluster 1",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV Grid (excl. HCV)",
+        "cell_coordinates": [
+          "B4"
+        ]
+      }
+    },
+    "Segment": {
+      "canonical_name": null,
+      "source_header": "Segment",
+      "raw_value": "GCV4 upto 1.6T 0-5 years",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV Grid (excl. HCV)",
+        "cell_coordinates": [
+          "C4"
+        ]
+      }
+    },
+    "Make": {
+      "canonical_name": null,
+      "source_header": "Make",
+      "raw_value": "All",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV Grid (excl. HCV)",
+        "cell_coordinates": [
+          "D4"
+        ]
+      }
+    },
+    "Digit_FY 25-26 COMP | CD1": {
+      "canonical_name": null,
+      "source_header": "Digit_FY 25-26 COMP | CD1",
+      "raw_value": 0.8,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV Grid (excl. HCV)",
+        "cell_coordinates": [
+          "E4"
+        ]
+      }
+    },
+    "Digit_FY 25-26 COMP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Digit_FY 25-26 COMP | Max CD2",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV Grid (excl. HCV)",
+        "cell_coordinates": [
+          "F4"
+        ]
+      }
+    },
+    "Digit_FY 25-26 SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Digit_FY 25-26 SATP | Max CD2",
+      "raw_value": 0.5,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV Grid (excl. HCV)",
+        "cell_coordinates": [
+          "G4"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: HCV GRID
+PRODUCT LINE: heavy_commercial_vehicle
+TABLE TYPE: commission_grid
+RECORD COUNT: 592
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Refer Addition Notes mentioned below the grid | Cluster
+  Sample values: ['Good GJ', 'Good GJ', 'Good GJ', 'Good GJ', 'Good GJ']
+
+  Field: Refer Addition Notes mentioned below the grid | Segment
+  Sample values: ['GCV4 12 to 20T', 'GCV4 12 to 20T', 'GCV4 12 to 20T', 'GCV4 20 to 40T', 'GCV4 20 to 40T']
+
+  Field: Make
+  Sample values: ['All', 'All', 'All', 'All', 'All']
+
+  Field: Age From
+  Sample values: [0, 2, 6, 0, 2]
+
+  Field: Age To
+  Sample values: [1, 5, 99, 1, 5]
+
+  Field: Non-Dumper/Tipper | Comp | CD1
+  Sample values: [0.6, 0.8, '85%/90%', 0.6, 0.85]
+
+  Field: Non-Dumper/Tipper | Comp | Avg CD2
+  Sample values: [0.025, 0.155, '25.5%/23.5%', 0.025, 0.19]
+
+  Field: Non-Dumper/Tipper | Comp | Max CD2
+  Sample values: [0.025, 0.18, '28%/26%', 0.025, 0.215]
+
+  Field: Non-Dumper/Tipper | SATP | Avg CD2
+  Sample values: [0.1, 0.235, 0.35, 0.1, 0.36]
+
+  Field: Non-Dumper/Tipper | SATP | Max CD2
+  Sample values: [0.125, 0.26, 0.375, 0.125, 0.385]
+
+  Field: Dumper/Tipper | Comp | CD1
+  Sample values: [0.6, 0.8, '85%/90%', 0.6, 0.85]
+
+  Field: Dumper/Tipper | Comp | Avg CD2
+  Sample values: [0.225, 0.225, '26.5%/24.5%', 0.175, 0.205]
+
+  Field: Dumper/Tipper | Comp | Max CD2
+  Sample values: [0.25, 0.25, '29%/27%', 0.2, 0.23]
+
+  Field: Dumper/Tipper | SATP | Avg CD2
+  Sample values: [0.425, 0.435, 0.36, 0.425, 0.435]
+
+  Field: Dumper/Tipper | SATP | Max CD2
+  Sample values: [0.45, 0.46, 0.385, 0.45, 0.46]
+
+  Field: Port Trailer | Comp | CD1
+  Sample values: ['D', 'D', 'D', 'D', 'D']
+
+  Field: Port Trailer | Comp | Avg CD2
+  Sample values: ['D', 'D', 'D', 'D', 'D']
+
+  Field: Port Trailer | Comp | Max CD2
+  Sample values: ['D', 'D', 'D', 'D', 'D']
+
+  Field: Port Trailer | SATP | Avg CD2
+  Sample values: ['D', 'D', 'D', 'D', 'D']
+
+  Field: Port Trailer | SATP | Max CD2
+  Sample values: ['D', 'D', 'D', 'D', 'D']
+
+  Field: Oil Tanker | Comp | CD1
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.8, '85%/90%', 'For 0-1 age Non Dumper Tipper grids to be referred', 0.85]
+
+  Field: Oil Tanker | Comp | Avg CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.175, '26.5%/24.5%', 'For 0-1 age Non Dumper Tipper grids to be referred', 0.205]
+
+  Field: Oil Tanker | Comp | Max CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.2, '29%/27%', 'For 0-1 age Non Dumper Tipper grids to be referred', 0.23]
+
+  Field: Oil Tanker | SATP | Avg CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.255, 0.435, 'For 0-1 age Non Dumper Tipper grids to be referred', 0.37]
+
+  Field: Oil Tanker | SATP | Max CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.28, 0.46, 'For 0-1 age Non Dumper Tipper grids to be referred', 0.395]
+
+  Field: Gas Tanker | Comp | CD1
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.8, '85%/90%', 'For 0-1 age Non Dumper Tipper grids to be referred', 0.85]
+
+  Field: Gas Tanker | Comp | Avg CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.175, '26.5%/24.5%', 'For 0-1 age Non Dumper Tipper grids to be referred', 0.205]
+
+  Field: Gas Tanker | Comp | Max CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.2, '29%/27%', 'For 0-1 age Non Dumper Tipper grids to be referred', 0.23]
+
+  Field: Gas Tanker | SATP | Avg CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.255, 0.435, 'For 0-1 age Non Dumper Tipper grids to be referred', 0.37]
+
+  Field: Gas Tanker | SATP | Max CD2
+  Sample values: ['For 0-1 age Non Dumper Tipper grids to be referred', 0.28, 0.46, 'For 0-1 age Non Dumper Tipper grids to be referred', 0.395]
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:HCV GRID:4",
+  "source_id": "godigit_mar_2026",
+  "product_line": "heavy_commercial_vehicle",
+  "table_type": "commission_grid",
+  "source_row": 4,
+  "fields": {
+    "Refer Addition Notes mentioned below the grid | Cluster": {
+      "canonical_name": null,
+      "source_header": "Refer Addition Notes mentioned below the grid | Cluster",
+      "raw_value": "Good GJ",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "A4"
+        ]
+      }
+    },
+    "Refer Addition Notes mentioned below the grid | Segment": {
+      "canonical_name": null,
+      "source_header": "Refer Addition Notes mentioned below the grid | Segment",
+      "raw_value": "GCV4 12 to 20T",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "B4"
+        ]
+      }
+    },
+    "Make": {
+      "canonical_name": null,
+      "source_header": "Make",
+      "raw_value": "All",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "C4"
+        ]
+      }
+    },
+    "Age From": {
+      "canonical_name": null,
+      "source_header": "Age From",
+      "raw_value": 0,
+      "normalized_value": null,
+      "data_type": "int",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "D4"
+        ]
+      }
+    },
+    "Age To": {
+      "canonical_name": null,
+      "source_header": "Age To",
+      "raw_value": 1,
+      "normalized_value": null,
+      "data_type": "int",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "E4"
+        ]
+      }
+    },
+    "Non-Dumper/Tipper | Comp | CD1": {
+      "canonical_name": null,
+      "source_header": "Non-Dumper/Tipper | Comp | CD1",
+      "raw_value": 0.6,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "F4"
+        ]
+      }
+    },
+    "Non-Dumper/Tipper | Comp | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Non-Dumper/Tipper | Comp | Avg CD2",
+      "raw_value": 0.025,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "G4"
+        ]
+      }
+    },
+    "Non-Dumper/Tipper | Comp | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Non-Dumper/Tipper | Comp | Max CD2",
+      "raw_value": 0.025,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "H4"
+        ]
+      }
+    },
+    "Non-Dumper/Tipper | SATP | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Non-Dumper/Tipper | SATP | Avg CD2",
+      "raw_value": 0.1,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "I4"
+        ]
+      }
+    },
+    "Non-Dumper/Tipper | SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Non-Dumper/Tipper | SATP | Max CD2",
+      "raw_value": 0.125,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "J4"
+        ]
+      }
+    },
+    "Dumper/Tipper | Comp | CD1": {
+      "canonical_name": null,
+      "source_header": "Dumper/Tipper | Comp | CD1",
+      "raw_value": 0.6,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "K4"
+        ]
+      }
+    },
+    "Dumper/Tipper | Comp | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Dumper/Tipper | Comp | Avg CD2",
+      "raw_value": 0.225,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "L4"
+        ]
+      }
+    },
+    "Dumper/Tipper | Comp | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Dumper/Tipper | Comp | Max CD2",
+      "raw_value": 0.25,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "M4"
+        ]
+      }
+    },
+    "Dumper/Tipper | SATP | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Dumper/Tipper | SATP | Avg CD2",
+      "raw_value": 0.425,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "N4"
+        ]
+      }
+    },
+    "Dumper/Tipper | SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Dumper/Tipper | SATP | Max CD2",
+      "raw_value": 0.45,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "O4"
+        ]
+      }
+    },
+    "Port Trailer | Comp | CD1": {
+      "canonical_name": null,
+      "source_header": "Port Trailer | Comp | CD1",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "P4"
+        ]
+      }
+    },
+    "Port Trailer | Comp | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Port Trailer | Comp | Avg CD2",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "Q4"
+        ]
+      }
+    },
+    "Port Trailer | Comp | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Port Trailer | Comp | Max CD2",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "R4"
+        ]
+      }
+    },
+    "Port Trailer | SATP | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Port Trailer | SATP | Avg CD2",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "S4"
+        ]
+      }
+    },
+    "Port Trailer | SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Port Trailer | SATP | Max CD2",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "T4"
+        ]
+      }
+    },
+    "Oil Tanker | Comp | CD1": {
+      "canonical_name": null,
+      "source_header": "Oil Tanker | Comp | CD1",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Oil Tanker | Comp | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Oil Tanker | Comp | Avg CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Oil Tanker | Comp | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Oil Tanker | Comp | Max CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Oil Tanker | SATP | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Oil Tanker | SATP | Avg CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Oil Tanker | SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Oil Tanker | SATP | Max CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Gas Tanker | Comp | CD1": {
+      "canonical_name": null,
+      "source_header": "Gas Tanker | Comp | CD1",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Gas Tanker | Comp | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Gas Tanker | Comp | Avg CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Gas Tanker | Comp | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Gas Tanker | Comp | Max CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Gas Tanker | SATP | Avg CD2": {
+      "canonical_name": null,
+      "source_header": "Gas Tanker | SATP | Avg CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    },
+    "Gas Tanker | SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Gas Tanker | SATP | Max CD2",
+      "raw_value": "For 0-1 age Non Dumper Tipper grids to be referred",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "HCV GRID",
+        "cell_coordinates": [
+          "U4"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: TAXI Segments and Location wise
+PRODUCT LINE: taxi
+TABLE TYPE: commission_grid
+RECORD COUNT: 585
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Cluster
+  Sample values: ['Lucknow', 'Lucknow', 'Lucknow', 'Lucknow', 'Lucknow']
+
+  Field: Segment
+  Sample values: ['Taxi upto 5 seater non-diesel < 1000 cc', 'Taxi upto 5 seater non-diesel < 1000 cc', 'Taxi upto 5 seater non-diesel > 1000 cc', 'Taxi upto 5 seater non-diesel > 1000 cc', 'Taxi upto 5 seater non-diesel < 1000 cc']
+
+  Field: Make
+  Sample values: ['Maruti & Hyundai', 'Maruti & Hyundai', 'Maruti & Hyundai', 'Maruti & Hyundai', 'Other than Maruti & Hyundai']
+
+  Field: Addon/without Addon
+  Sample values: ['With Add on cover', 'Without Add on cover', 'With Add on cover', 'Without Add on cover', 'With Add on cover']
+
+  Field: Digit_FY 25-26 COMP | CD1
+  Sample values: [0.6, 0.6, 0.6, 0.7, 0.5]
+
+  Field: Digit_FY 25-26 COMP | Max CD2
+  Sample values: [0.25, 0.25, 0.3, 0.3, 0.1]
+
+  Field: Digit_FY 25-26 SATP | Max CD2
+  Sample values: [0.25, 0.25, 0.3, 0.3, 0.1]
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:TAXI Segments and Location wise:4",
+  "source_id": "godigit_mar_2026",
+  "product_line": "taxi",
+  "table_type": "commission_grid",
+  "source_row": 4,
+  "fields": {
+    "Cluster": {
+      "canonical_name": null,
+      "source_header": "Cluster",
+      "raw_value": "Lucknow",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TAXI Segments and Location wise",
+        "cell_coordinates": [
+          "B4"
+        ]
+      }
+    },
+    "Segment": {
+      "canonical_name": null,
+      "source_header": "Segment",
+      "raw_value": "Taxi upto 5 seater non-diesel < 1000 cc",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TAXI Segments and Location wise",
+        "cell_coordinates": [
+          "C4"
+        ]
+      }
+    },
+    "Make": {
+      "canonical_name": null,
+      "source_header": "Make",
+      "raw_value": "Maruti & Hyundai",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TAXI Segments and Location wise",
+        "cell_coordinates": [
+          "D4"
+        ]
+      }
+    },
+    "Addon/without Addon": {
+      "canonical_name": null,
+      "source_header": "Addon/without Addon",
+      "raw_value": "With Add on cover",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TAXI Segments and Location wise",
+        "cell_coordinates": [
+          "E4"
+        ]
+      }
+    },
+    "Digit_FY 25-26 COMP | CD1": {
+      "canonical_name": null,
+      "source_header": "Digit_FY 25-26 COMP | CD1",
+      "raw_value": 0.6,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TAXI Segments and Location wise",
+        "cell_coordinates": [
+          "F4"
+        ]
+      }
+    },
+    "Digit_FY 25-26 COMP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Digit_FY 25-26 COMP | Max CD2",
+      "raw_value": 0.25,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TAXI Segments and Location wise",
+        "cell_coordinates": [
+          "G4"
+        ]
+      }
+    },
+    "Digit_FY 25-26 SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "Digit_FY 25-26 SATP | Max CD2",
+      "raw_value": 0.25,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TAXI Segments and Location wise",
+        "cell_coordinates": [
+          "H4"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: 4W SATP
+PRODUCT LINE: four_wheeler_satp
+TABLE TYPE: commission_grid
+RECORD COUNT: 326
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Cluster
+  Sample values: ['All_India_Decline', 'All_India_Decline', 'All_India_Decline', 'All_India_Decline', 'All_India_Decline']
+
+  Field: Segment
+  Sample values: ['CNG<1000', 'CNG>1000', 'Diesel<1500', 'Diesel>1500', 'Petrol<1000']
+
+  Field: Age
+  Sample values: ['All', 'All', 'All', 'All', 'All']
+
+  Field: Max CD2
+  Sample values: [0, 0, 0, 0, 0]
+
+  Field: Note
+  Sample values: ['More than 1500CC and 10+age is declined', 'Few RTOs for 10+ age are declined', 'Few RTOs for all age are declined', 'Few RTOs for all age are declined', 'Few RTOs for <10 age are declined']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:4W SATP:3",
+  "source_id": "godigit_mar_2026",
+  "product_line": "four_wheeler_satp",
+  "table_type": "commission_grid",
+  "source_row": 3,
+  "fields": {
+    "Cluster": {
+      "canonical_name": null,
+      "source_header": "Cluster",
+      "raw_value": "All_India_Decline",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W SATP",
+        "cell_coordinates": [
+          "B3"
+        ]
+      }
+    },
+    "Segment": {
+      "canonical_name": null,
+      "source_header": "Segment",
+      "raw_value": "CNG<1000",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W SATP",
+        "cell_coordinates": [
+          "C3"
+        ]
+      }
+    },
+    "Age": {
+      "canonical_name": null,
+      "source_header": "Age",
+      "raw_value": "All",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W SATP",
+        "cell_coordinates": [
+          "D3"
+        ]
+      }
+    },
+    "Max CD2": {
+      "canonical_name": null,
+      "source_header": "Max CD2",
+      "raw_value": 0,
+      "normalized_value": null,
+      "data_type": "int",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W SATP",
+        "cell_coordinates": [
+          "E3"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: 4W New Business 1+3
+PRODUCT LINE: four_wheeler_new_business
+TABLE TYPE: commission_grid
+RECORD COUNT: 28
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Cluster
+  Sample values: ['Andaman', 'AP_TS', 'Assam', 'Bad_UP', 'Bihar']
+
+  Field: CD2 for New Business 1+3 | Tata
+  Sample values: [0.26, 0.2, 0.22, 0.195, 0.195]
+
+  Field: CD2 for New Business 1+3 | Kia
+  Sample values: [0.25, 0.215, 0.21, 0.24, 0.24]
+
+  Field: CD2 for New Business 1+3 | Mahindra
+  Sample values: [0.3, 0.3, 0.25, 0.195, 0.3]
+
+  Field: CD2 for New Business 1+3 | Hyundai
+  Sample values: [0.26, 0.24, 0.2, 0.25, 0.25]
+
+  Field: CD2 for New Business 1+3 | Toyota
+  Sample values: [0.27, 0.25, 0.23, 0.25, 0.25]
+
+  Field: CD2 for New Business 1+3 | HEV-Mercedes Benz, Ford, BMW, Jeep, Ferrari, Bentley, Rolls Royce, Chevrolet, Datsun, Nissan, Renault, Jaguar, Land Rover, BYD, Citrone, Tesla, Audi, Volvo, Porsche
+  Sample values: [0.195, 0.195, 0.195, 0.195, 0.195]
+
+  Field: CD2 for New Business 1+3 | Maruti, MG, Skoda, Volks, Honda, Renault, Others
+  Sample values: [0.25, 0.215, 0.21, 0.24, 0.24]
+
+  Field: 3+3 (Payable over 3 Yrs)
+  Sample values: [0.195, 0.195, 0.195, 0.195, 0.195]
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:4W New Business 1+3:4",
+  "source_id": "godigit_mar_2026",
+  "product_line": "four_wheeler_new_business",
+  "table_type": "commission_grid",
+  "source_row": 4,
+  "fields": {
+    "Cluster": {
+      "canonical_name": null,
+      "source_header": "Cluster",
+      "raw_value": "Andaman",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "A4"
+        ]
+      }
+    },
+    "CD2 for New Business 1+3 | Tata": {
+      "canonical_name": null,
+      "source_header": "CD2 for New Business 1+3 | Tata",
+      "raw_value": 0.26,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "B4"
+        ]
+      }
+    },
+    "CD2 for New Business 1+3 | Kia": {
+      "canonical_name": null,
+      "source_header": "CD2 for New Business 1+3 | Kia",
+      "raw_value": 0.25,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "C4"
+        ]
+      }
+    },
+    "CD2 for New Business 1+3 | Mahindra": {
+      "canonical_name": null,
+      "source_header": "CD2 for New Business 1+3 | Mahindra",
+      "raw_value": 0.3,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "D4"
+        ]
+      }
+    },
+    "CD2 for New Business 1+3 | Hyundai": {
+      "canonical_name": null,
+      "source_header": "CD2 for New Business 1+3 | Hyundai",
+      "raw_value": 0.26,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "E4"
+        ]
+      }
+    },
+    "CD2 for New Business 1+3 | Toyota": {
+      "canonical_name": null,
+      "source_header": "CD2 for New Business 1+3 | Toyota",
+      "raw_value": 0.27,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "F4"
+        ]
+      }
+    },
+    "CD2 for New Business 1+3 | HEV-Mercedes Benz, Ford, BMW, Jeep, Ferrari, Bentley, Rolls Royce, Chevrolet, Datsun, Nissan, Renault, Jaguar, Land Rover, BYD, Citrone, Tesla, Audi, Volvo, Porsche": {
+      "canonical_name": null,
+      "source_header": "CD2 for New Business 1+3 | HEV-Mercedes Benz, Ford, BMW, Jeep, Ferrari, Bentley, Rolls Royce, Chevrolet, Datsun, Nissan, Renault, Jaguar, Land Rover, BYD, Citrone, Tesla, Audi, Volvo, Porsche",
+      "raw_value": 0.195,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "G4"
+        ]
+      }
+    },
+    "CD2 for New Business 1+3 | Maruti, MG, Skoda, Volks, Honda, Renault, Others": {
+      "canonical_name": null,
+      "source_header": "CD2 for New Business 1+3 | Maruti, MG, Skoda, Volks, Honda, Renault, Others",
+      "raw_value": 0.25,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "H4"
+        ]
+      }
+    },
+    "3+3 (Payable over 3 Yrs)": {
+      "canonical_name": null,
+      "source_header": "3+3 (Payable over 3 Yrs)",
+      "raw_value": 0.195,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W New Business 1+3",
+        "cell_coordinates": [
+          "I4"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: TW 1+1 & SATP
+PRODUCT LINE: two_wheeler_1+1_satp
+TABLE TYPE: commission_grid
+RECORD COUNT: 353
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Agency/PB Clusters
+  Sample values: ['Andaman', 'Andaman', 'Andaman', 'Andaman', 'Andaman']
+
+  Field: Agency/PB Seg
+  Sample values: ['SC/EV', 'MC <= 180 Hero/Honda', 'MC <= 180 Others', 'MC_180-350_RE', 'MC_180-350_HONDA/JAWA/Avenger']
+
+  Field: 1+1 | CD1
+  Sample values: [0.7, 0.7, 0.7, 0.5, 0]
+
+  Field: 1+1 | Max CD2
+  Sample values: [0.51, 0.42, 0.375, 0.4, 0.3]
+
+  Field: SATP | Max CD2
+  Sample values: [0.51, 0.325, 0.375, 0.325, 0.3]
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:TW 1+1 & SATP:5",
+  "source_id": "godigit_mar_2026",
+  "product_line": "two_wheeler_1+1_satp",
+  "table_type": "commission_grid",
+  "source_row": 5,
+  "fields": {
+    "Agency/PB Clusters": {
+      "canonical_name": null,
+      "source_header": "Agency/PB Clusters",
+      "raw_value": "Andaman",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+1 & SATP",
+        "cell_coordinates": [
+          "B5"
+        ]
+      }
+    },
+    "Agency/PB Seg": {
+      "canonical_name": null,
+      "source_header": "Agency/PB Seg",
+      "raw_value": "SC/EV",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+1 & SATP",
+        "cell_coordinates": [
+          "C5"
+        ]
+      }
+    },
+    "1+1 | CD1": {
+      "canonical_name": null,
+      "source_header": "1+1 | CD1",
+      "raw_value": 0.7,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+1 & SATP",
+        "cell_coordinates": [
+          "D5"
+        ]
+      }
+    },
+    "1+1 | Max CD2": {
+      "canonical_name": null,
+      "source_header": "1+1 | Max CD2",
+      "raw_value": 0.51,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+1 & SATP",
+        "cell_coordinates": [
+          "E5"
+        ]
+      }
+    },
+    "SATP | Max CD2": {
+      "canonical_name": null,
+      "source_header": "SATP | Max CD2",
+      "raw_value": 0.51,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+1 & SATP",
+        "cell_coordinates": [
+          "F5"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: TW 1+5
+PRODUCT LINE: two_wheeler_1+5
+TABLE TYPE: commission_grid
+RECORD COUNT: 945
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Agency/PB Clusters
+  Sample values: ['Andaman', 'Andaman', 'Andaman', 'Andaman', 'Andaman']
+
+  Field: Make
+  Sample values: ['BAJAJ', 'BAJAJ', 'BAJAJ', 'HERO MOTOCORP', 'HONDA']
+
+  Field: Agency/PB Seg
+  Sample values: ['3-7 KW', 'MC <=155', 'MC >155', 'All', 'MC <=155']
+
+  Field: 1+5 | CD1
+  Sample values: [0.2, 0.2, 0.2, 0, 0.4000228656372843]
+
+  Field: 1+5 | Max CD2
+  Sample values: [0.425, 0.32499999999999996, 'MISP', 'D', 0.375]
+
+  Field: 1+5 | Formula Type
+  Sample values: ['Slab Net 5', 'Slab Net 5', 'Slab 0n -  OD plus Add on', 'Slab Net 5', 'Slab Net 5']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:TW 1+5:3",
+  "source_id": "godigit_mar_2026",
+  "product_line": "two_wheeler_1+5",
+  "table_type": "commission_grid",
+  "source_row": 3,
+  "fields": {
+    "Agency/PB Clusters": {
+      "canonical_name": null,
+      "source_header": "Agency/PB Clusters",
+      "raw_value": "Andaman",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+5",
+        "cell_coordinates": [
+          "B3"
+        ]
+      }
+    },
+    "Make": {
+      "canonical_name": null,
+      "source_header": "Make",
+      "raw_value": "BAJAJ",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+5",
+        "cell_coordinates": [
+          "C3"
+        ]
+      }
+    },
+    "Agency/PB Seg": {
+      "canonical_name": null,
+      "source_header": "Agency/PB Seg",
+      "raw_value": "3-7 KW",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+5",
+        "cell_coordinates": [
+          "D3"
+        ]
+      }
+    },
+    "1+5 | CD1": {
+      "canonical_name": null,
+      "source_header": "1+5 | CD1",
+      "raw_value": 0.2,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+5",
+        "cell_coordinates": [
+          "E3"
+        ]
+      }
+    },
+    "1+5 | Max CD2": {
+      "canonical_name": null,
+      "source_header": "1+5 | Max CD2",
+      "raw_value": 0.425,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+5",
+        "cell_coordinates": [
+          "F3"
+        ]
+      }
+    },
+    "1+5 | Formula Type": {
+      "canonical_name": null,
+      "source_header": "1+5 | Formula Type",
+      "raw_value": "Slab Net 5",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW 1+5",
+        "cell_coordinates": [
+          "G3"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: 2W Grid 5+5
+PRODUCT LINE: two_wheeler_5+5
+TABLE TYPE: commission_grid
+RECORD COUNT: 1197
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: PB_Cluster
+  Sample values: ['All', 'Andaman', 'Andaman', 'Andaman', 'Andaman']
+
+  Field: Make
+  Sample values: ['HERO MOTOCORP', 'BAJAJ', 'BAJAJ', 'BAJAJ', 'HONDA']
+
+  Field: Segement
+  Sample values: ['All', '3-7 KW', 'MC <=155', 'MC >155', 'MC <=155']
+
+  Field: Max CD1
+  Sample values: ['D', 0.2, 0.2, 'D', 0.4000228656372843]
+
+  Field: Max CD2
+  Sample values: ['D', 0.32499999999999996, 0.22499999999999995, 'D', 0.275]
+
+  Field: Formula Type
+  Sample values: ['Slab Net 5', 'Slab Net 5', 'Slab Net 5', 'Slab 0n -  OD plus Add on', 'Slab Net 5']
+
+  Field: Remarks
+  Sample values: ['W/O Add on', 'W/O CPA', 'W/o Add on and CPA']
+
+  Field: CD2 Reductions
+  Sample values: [-0.05, -0.05, -0.1]
+
+  Field: Note
+  Sample values: ['Format error', 'Format error', 'Format error', 'Format error', 'Format error']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:2W Grid 5+5:3",
+  "source_id": "godigit_mar_2026",
+  "product_line": "two_wheeler_5+5",
+  "table_type": "commission_grid",
+  "source_row": 3,
+  "fields": {
+    "PB_Cluster": {
+      "canonical_name": null,
+      "source_header": "PB_Cluster",
+      "raw_value": "All",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "B3"
+        ]
+      }
+    },
+    "Make": {
+      "canonical_name": null,
+      "source_header": "Make",
+      "raw_value": "HERO MOTOCORP",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "C3"
+        ]
+      }
+    },
+    "Segement": {
+      "canonical_name": null,
+      "source_header": "Segement",
+      "raw_value": "All",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "D3"
+        ]
+      }
+    },
+    "Max CD1": {
+      "canonical_name": null,
+      "source_header": "Max CD1",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "E3"
+        ]
+      }
+    },
+    "Max CD2": {
+      "canonical_name": null,
+      "source_header": "Max CD2",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "F3"
+        ]
+      }
+    },
+    "Formula Type": {
+      "canonical_name": null,
+      "source_header": "Formula Type",
+      "raw_value": "Slab Net 5",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "G3"
+        ]
+      }
+    },
+    "Remarks": {
+      "canonical_name": null,
+      "source_header": "Remarks",
+      "raw_value": "W/O Add on",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "J3"
+        ]
+      }
+    },
+    "CD2 Reductions": {
+      "canonical_name": null,
+      "source_header": "CD2 Reductions",
+      "raw_value": -0.05,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W Grid 5+5",
+        "cell_coordinates": [
+          "K3"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: TW SAOD with Flexi Options
+PRODUCT LINE: two_wheeler_saod
+TABLE TYPE: commission_grid
+RECORD COUNT: 135
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: Cluster
+  Sample values: ['AHMEDABAD,SURAT,BARODA', 'AHMEDABAD,SURAT,BARODA', 'AHMEDABAD,SURAT,BARODA', 'AHMEDABAD,SURAT,BARODA', 'AHMEDABAD,SURAT,BARODA']
+
+  Field: Segment
+  Sample values: ['MC <155', 'MC>155', 'RE', 'SC', 'SC_EV']
+
+  Field: Min CD1
+  Sample values: [0, 0, 0, 0, 0]
+
+  Field: Max CD1 for NoBreakIn
+  Sample values: [0.8, 0.45, 0.8, 0.75, 0.4]
+
+  Field: Max CD1 for BreakIn
+  Sample values: [0.55, 0.2, 0.7, 0.45, 0.35]
+
+  Field: CD2
+  Sample values: [0.225, 0.225, 0.225, 0.225, 0.225]
+
+  Field: Max 1 year CD2
+  Sample values: [0.4, 0.4, 0.4, 0.4, 0.25]
+
+  Field: Max 2 year CD2
+  Sample values: [0.35, 0.35, 0.35, 0.35, 0.225]
+
+  Field: Max 3rd year CD2
+  Sample values: [0.325, 0.325, 0.325, 0.325, 0.2]
+
+  Field: Max 4th year CD2
+  Sample values: [0.3, 0.3, 0.3, 0.3, 0.175]
+
+  Field: Note
+  Sample values: ['MC other than RE', 'MC other than RE']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:TW SAOD with Flexi Options:6",
+  "source_id": "godigit_mar_2026",
+  "product_line": "two_wheeler_saod",
+  "table_type": "commission_grid",
+  "source_row": 6,
+  "fields": {
+    "Cluster": {
+      "canonical_name": null,
+      "source_header": "Cluster",
+      "raw_value": "AHMEDABAD,SURAT,BARODA",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "B6"
+        ]
+      }
+    },
+    "Segment": {
+      "canonical_name": null,
+      "source_header": "Segment",
+      "raw_value": "MC <155",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "C6"
+        ]
+      }
+    },
+    "Min CD1": {
+      "canonical_name": null,
+      "source_header": "Min CD1",
+      "raw_value": 0,
+      "normalized_value": null,
+      "data_type": "int",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "D6"
+        ]
+      }
+    },
+    "Max CD1 for NoBreakIn": {
+      "canonical_name": null,
+      "source_header": "Max CD1 for NoBreakIn",
+      "raw_value": 0.8,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "E6"
+        ]
+      }
+    },
+    "Max CD1 for BreakIn": {
+      "canonical_name": null,
+      "source_header": "Max CD1 for BreakIn",
+      "raw_value": 0.55,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "F6"
+        ]
+      }
+    },
+    "CD2": {
+      "canonical_name": null,
+      "source_header": "CD2",
+      "raw_value": 0.225,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "G6"
+        ]
+      }
+    },
+    "Max 1 year CD2": {
+      "canonical_name": null,
+      "source_header": "Max 1 year CD2",
+      "raw_value": 0.4,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "H6"
+        ]
+      }
+    },
+    "Max 2 year CD2": {
+      "canonical_name": null,
+      "source_header": "Max 2 year CD2",
+      "raw_value": 0.35,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "I6"
+        ]
+      }
+    },
+    "Max 3rd year CD2": {
+      "canonical_name": null,
+      "source_header": "Max 3rd year CD2",
+      "raw_value": 0.325,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "J6"
+        ]
+      }
+    },
+    "Max 4th year CD2": {
+      "canonical_name": null,
+      "source_header": "Max 4th year CD2",
+      "raw_value": 0.3,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "TW SAOD with Flexi Options",
+        "cell_coordinates": [
+          "K6"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: School & Staff Bus 
+PRODUCT LINE: school_staff_bus
+TABLE TYPE: commission_grid
+RECORD COUNT: 60
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: School Bus (PCV 8 & Above) | State_1
+  Sample values: ['Gujarat, Punjab & Delhi NCR', 'Punjab', 'Delhi NCR', 'Uttar Pradesh', 'Uttar Pradesh']
+
+  Field: School Bus (PCV 8 & Above) | RTO Cluster
+  Sample values: ['Gujarat', 'Punjab', 'Delhi NCR', 'UP Open', 'UP Declined']
+
+  Field: School Bus (PCV 8 & Above) | Seating Capacity
+  Sample values: ['8 & above', '8 & above', '8 & above', '8 & above', '8 & above']
+
+  Field: School Bus (PCV 8 & Above) | In the name of School | Max CD2
+  Sample values: [0.6749999999999999, 0.6749999999999999, 0.6749999999999999, 0.6749999999999999, 0.5]
+
+  Field: School Bus (PCV 8 & Above) | On Contract (Transporter)
+  Sample values: [0.575, 0.575, 0.575, 0.575, 'D']
+
+  Field: School Bus (PCV 8 & Above) | On Contract (Individual)
+  Sample values: ['D', 'D', 'D', 0.575, 'D']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:School & Staff Bus :6",
+  "source_id": "godigit_mar_2026",
+  "product_line": "school_staff_bus",
+  "table_type": "commission_grid",
+  "source_row": 6,
+  "fields": {
+    "School Bus (PCV 8 & Above) | State_1": {
+      "canonical_name": null,
+      "source_header": "School Bus (PCV 8 & Above) | State_1",
+      "raw_value": "Gujarat, Punjab & Delhi NCR",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus ",
+        "cell_coordinates": [
+          "B6"
+        ]
+      }
+    },
+    "School Bus (PCV 8 & Above) | RTO Cluster": {
+      "canonical_name": null,
+      "source_header": "School Bus (PCV 8 & Above) | RTO Cluster",
+      "raw_value": "Gujarat",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus ",
+        "cell_coordinates": [
+          "C6"
+        ]
+      }
+    },
+    "School Bus (PCV 8 & Above) | Seating Capacity": {
+      "canonical_name": null,
+      "source_header": "School Bus (PCV 8 & Above) | Seating Capacity",
+      "raw_value": "8 & above",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus ",
+        "cell_coordinates": [
+          "D6"
+        ]
+      }
+    },
+    "School Bus (PCV 8 & Above) | In the name of School | Max CD2": {
+      "canonical_name": null,
+      "source_header": "School Bus (PCV 8 & Above) | In the name of School | Max CD2",
+      "raw_value": 0.6749999999999999,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus ",
+        "cell_coordinates": [
+          "E6"
+        ]
+      }
+    },
+    "School Bus (PCV 8 & Above) | On Contract (Transporter)": {
+      "canonical_name": null,
+      "source_header": "School Bus (PCV 8 & Above) | On Contract (Transporter)",
+      "raw_value": 0.575,
+      "normalized_value": null,
+      "data_type": "float",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus ",
+        "cell_coordinates": [
+          "F6"
+        ]
+      }
+    },
+    "School Bus (PCV 8 & Above) | On Contract (Individual)": {
+      "canonical_name": null,
+      "source_header": "School Bus (PCV 8 & Above) | On Contract (Individual)",
+      "raw_value": "D",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus ",
+        "cell_coordinates": [
+          "G6"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: School & Staff Bus RTO
+PRODUCT LINE: school_staff_bus
+TABLE TYPE: rto_mapping
+RECORD COUNT: 1885
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: School Bus | RTO Code
+  Sample values: ['AP01', 'AP02', 'AP03', 'AP14', 'AP15']
+
+  Field: School Bus | State
+  Sample values: ['TELANGANA', 'ANDHRA PRADESH', 'ANDHRA PRADESH', 'TELANGANA', 'TELANGANA']
+
+  Field: School Bus | State_1
+  Sample values: ['TELANGANA', 'ANDHRA PRADESH', 'ANDHRA PRADESH', 'TELANGANA', 'TELANGANA']
+
+  Field: School Bus | CV_PCV_6+Seating
+  Sample values: ['TS Open', 'Rest of AP', 'Rest of AP', 'TS Open', 'TS Open']
+
+  Field: Staff Bus | RTO Code
+  Sample values: ['AP01', 'AP02', 'AP03', 'AP14', 'AP15']
+
+  Field: Staff Bus | State
+  Sample values: ['TELANGANA', 'ANDHRA PRADESH', 'ANDHRA PRADESH', 'TELANGANA', 'TELANGANA']
+
+  Field: Staff Bus | State_1
+  Sample values: ['Rest of India', 'ANDHRA PRADESH', 'ANDHRA PRADESH', 'Rest of India', 'Rest of India']
+
+  Field: Staff Bus | CV_PCV_6+Seating
+  Sample values: ['Rest of India', 'AP', 'AP', 'Rest of India', 'Rest of India']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:School & Staff Bus RTO:3",
+  "source_id": "godigit_mar_2026",
+  "product_line": "school_staff_bus",
+  "table_type": "rto_mapping",
+  "source_row": 3,
+  "fields": {
+    "School Bus | RTO Code": {
+      "canonical_name": null,
+      "source_header": "School Bus | RTO Code",
+      "raw_value": "AP01",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "B3"
+        ]
+      }
+    },
+    "School Bus | State": {
+      "canonical_name": null,
+      "source_header": "School Bus | State",
+      "raw_value": "TELANGANA",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "C3"
+        ]
+      }
+    },
+    "School Bus | State_1": {
+      "canonical_name": null,
+      "source_header": "School Bus | State_1",
+      "raw_value": "TELANGANA",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "D3"
+        ]
+      }
+    },
+    "School Bus | CV_PCV_6+Seating": {
+      "canonical_name": null,
+      "source_header": "School Bus | CV_PCV_6+Seating",
+      "raw_value": "TS Open",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "E3"
+        ]
+      }
+    },
+    "Staff Bus | RTO Code": {
+      "canonical_name": null,
+      "source_header": "Staff Bus | RTO Code",
+      "raw_value": "AP01",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "I3"
+        ]
+      }
+    },
+    "Staff Bus | State": {
+      "canonical_name": null,
+      "source_header": "Staff Bus | State",
+      "raw_value": "TELANGANA",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "J3"
+        ]
+      }
+    },
+    "Staff Bus | State_1": {
+      "canonical_name": null,
+      "source_header": "Staff Bus | State_1",
+      "raw_value": "Rest of India",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "K3"
+        ]
+      }
+    },
+    "Staff Bus | CV_PCV_6+Seating": {
+      "canonical_name": null,
+      "source_header": "Staff Bus | CV_PCV_6+Seating",
+      "raw_value": "Rest of India",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "School & Staff Bus RTO",
+        "cell_coordinates": [
+          "L3"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: CV RTO Mapping
+PRODUCT LINE: commercial_vehicle
+TABLE TYPE: rto_mapping
+RECORD COUNT: 1921
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: RTO Code
+  Sample values: ['AN01', 'AN02', 'AP01', 'AP02', 'AP03']
+
+  Field: State
+  Sample values: ['ANDAMAN & NICOBAR ISLANDS', 'ANDAMAN & NICOBAR ISLANDS', 'TELANGANA', 'ANDHRA PRADESH', 'ANDHRA PRADESH']
+
+  Field: City
+  Sample values: ['PORT BLAIR', 'CAR NICOBAR', 'ADILABAD', 'ANANTAPUR', 'TIRUPATHI']
+
+  Field: CV | CV_GCV3(EV/Non-EV)
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'AP & TS REF', 'BAD AP & TS', 'BAD AP & TS']
+
+  Field: CV | CV_LCV
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'LOWCD2_10', 'LOWCD2_10', 'LOWCD2_10']
+
+  Field: CV | CV_MCV
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'BAD AP & TS', 'BAD AP & TS', 'BAD AP & TS']
+
+  Field: CV | CV_HCV
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'BAD AP & TS', 'BAD AP & TS', 'LOWCD2_20TO40_15']
+
+  Field: CV | CV_PCV2W(All)_3W_Non-electric
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'BAD AP & TS', 'BAD AP & TS', 'BAD AP & TS']
+
+  Field: CV | PCV_3W_Electric
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'BAD AP & TS', 'BAD AP & TS', 'BAD AP & TS']
+
+  Field: CV | CV_PCV4(Upto 5 seating)
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'BAD AP & TS', 'BAD AP & TS', 'BAD AP & TS']
+
+  Field: CV | CV_PCV_6+Seating
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'BAD AP & TS', 'BAD AP & TS', 'BAD AP & TS']
+
+  Field: CV | CV_MiscD
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'BAD AP & TS', 'BAD AP & TS', 'BAD AP & TS']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:CV RTO Mapping:3",
+  "source_id": "godigit_mar_2026",
+  "product_line": "commercial_vehicle",
+  "table_type": "rto_mapping",
+  "source_row": 3,
+  "fields": {
+    "RTO Code": {
+      "canonical_name": null,
+      "source_header": "RTO Code",
+      "raw_value": "AN01",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "A3"
+        ]
+      }
+    },
+    "State": {
+      "canonical_name": null,
+      "source_header": "State",
+      "raw_value": "ANDAMAN & NICOBAR ISLANDS",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "B3"
+        ]
+      }
+    },
+    "City": {
+      "canonical_name": null,
+      "source_header": "City",
+      "raw_value": "PORT BLAIR",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "C3"
+        ]
+      }
+    },
+    "CV | CV_GCV3(EV/Non-EV)": {
+      "canonical_name": null,
+      "source_header": "CV | CV_GCV3(EV/Non-EV)",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "D3"
+        ]
+      }
+    },
+    "CV | CV_LCV": {
+      "canonical_name": null,
+      "source_header": "CV | CV_LCV",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "E3"
+        ]
+      }
+    },
+    "CV | CV_MCV": {
+      "canonical_name": null,
+      "source_header": "CV | CV_MCV",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "F3"
+        ]
+      }
+    },
+    "CV | CV_HCV": {
+      "canonical_name": null,
+      "source_header": "CV | CV_HCV",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "G3"
+        ]
+      }
+    },
+    "CV | CV_PCV2W(All)_3W_Non-electric": {
+      "canonical_name": null,
+      "source_header": "CV | CV_PCV2W(All)_3W_Non-electric",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "H3"
+        ]
+      }
+    },
+    "CV | PCV_3W_Electric": {
+      "canonical_name": null,
+      "source_header": "CV | PCV_3W_Electric",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "I3"
+        ]
+      }
+    },
+    "CV | CV_PCV4(Upto 5 seating)": {
+      "canonical_name": null,
+      "source_header": "CV | CV_PCV4(Upto 5 seating)",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "J3"
+        ]
+      }
+    },
+    "CV | CV_PCV_6+Seating": {
+      "canonical_name": null,
+      "source_header": "CV | CV_PCV_6+Seating",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "K3"
+        ]
+      }
+    },
+    "CV | CV_MiscD": {
+      "canonical_name": null,
+      "source_header": "CV | CV_MiscD",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "CV RTO Mapping",
+        "cell_coordinates": [
+          "L3"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: 2W RTO's
+PRODUCT LINE: two_wheeler
+TABLE TYPE: rto_mapping
+RECORD COUNT: 1588
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: RTO_Code
+  Sample values: ['AN01', 'AN02', 'AP01', 'AP02', 'AP03']
+
+  Field: 2W_1+1 & SATP | Clusters
+  Sample values: ['Andaman', 'Andaman', 'APTS_Bad', 'APTS_Bad', 'APTS_Ref']
+
+  Field: 2W 1+5 & 5+5 | Clusters
+  Sample values: ['Andaman', 'Andaman', 'APTS_Bad', 'APTS_Bad', 'APTS_Ref']
+
+  Field: 2W_SAOD | Clusters
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'AP', 'AP', 'AP']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:2W RTO's:3",
+  "source_id": "godigit_mar_2026",
+  "product_line": "two_wheeler",
+  "table_type": "rto_mapping",
+  "source_row": 3,
+  "fields": {
+    "RTO_Code": {
+      "canonical_name": null,
+      "source_header": "RTO_Code",
+      "raw_value": "AN01",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W RTO's",
+        "cell_coordinates": [
+          "B3"
+        ]
+      }
+    },
+    "2W_1+1 & SATP | Clusters": {
+      "canonical_name": null,
+      "source_header": "2W_1+1 & SATP | Clusters",
+      "raw_value": "Andaman",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W RTO's",
+        "cell_coordinates": [
+          "C3"
+        ]
+      }
+    },
+    "2W 1+5 & 5+5 | Clusters": {
+      "canonical_name": null,
+      "source_header": "2W 1+5 & 5+5 | Clusters",
+      "raw_value": "Andaman",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W RTO's",
+        "cell_coordinates": [
+          "D3"
+        ]
+      }
+    },
+    "2W_SAOD | Clusters": {
+      "canonical_name": null,
+      "source_header": "2W_SAOD | Clusters",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "2W RTO's",
+        "cell_coordinates": [
+          "E3"
+        ]
+      }
+    }
+  }
+}
+
+======================================================================
+SHEET: 4W  RTO
+PRODUCT LINE: four_wheeler
+TABLE TYPE: rto_mapping
+RECORD COUNT: 1722
+
+FIELDS AND SAMPLE VALUES:
+
+  Field: RTO Code
+  Sample values: ['AN01', 'AN02', 'AP01', 'AP02', 'AP03']
+
+  Field: 4WTP
+  Sample values: ['Andaman', 'Andaman', 'South_Ref', 'South_Ref', 'AP TS_BAD']
+
+  Field: 4W Package
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'AP_TS', 'AP_TS', 'AP_TS']
+
+  Field: 4WSAOD
+  Sample values: ['ANDAMAN', 'ANDAMAN', 'AP_TS', 'AP_TS', 'AP_TS']
+
+  Field: PLR Cluster
+  Sample values: ['GOA_ANDAMAN', 'GOA_ANDAMAN', 'SOUTH_REF', 'SOUTH_REF', 'AP TS_BAD']
+
+FIRST RECORD:
+{
+  "record_id": "godigit_mar_2026:4W  RTO:3",
+  "source_id": "godigit_mar_2026",
+  "product_line": "four_wheeler",
+  "table_type": "rto_mapping",
+  "source_row": 3,
+  "fields": {
+    "RTO Code": {
+      "canonical_name": null,
+      "source_header": "RTO Code",
+      "raw_value": "AN01",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W  RTO",
+        "cell_coordinates": [
+          "B3"
+        ]
+      }
+    },
+    "4WTP": {
+      "canonical_name": null,
+      "source_header": "4WTP",
+      "raw_value": "Andaman",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W  RTO",
+        "cell_coordinates": [
+          "C3"
+        ]
+      }
+    },
+    "4W Package": {
+      "canonical_name": null,
+      "source_header": "4W Package",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W  RTO",
+        "cell_coordinates": [
+          "D3"
+        ]
+      }
+    },
+    "4WSAOD": {
+      "canonical_name": null,
+      "source_header": "4WSAOD",
+      "raw_value": "ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W  RTO",
+        "cell_coordinates": [
+          "E3"
+        ]
+      }
+    },
+    "PLR Cluster": {
+      "canonical_name": null,
+      "source_header": "PLR Cluster",
+      "raw_value": "GOA_ANDAMAN",
+      "normalized_value": null,
+      "data_type": "str",
+      "source": {
+        "source_id": "godigit_mar_2026",
+        "filename": "Large Insurance Brokers Mar'26 - Shared.xlsx",
+        "sheet_name": "4W  RTO",
+        "cell_coordinates": [
+          "F3"
+        ]
+      }
+    }
+  }
+}
