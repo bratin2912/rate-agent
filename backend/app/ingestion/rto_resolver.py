@@ -1,8 +1,10 @@
 
+import re
 from typing import Any
 
 
 class RTOResolver:
+    """Resolve an RTO code to the insurer-specific product cluster."""
 
     RTO_SHEET = "CV RTO Mapping"
 
@@ -22,7 +24,7 @@ class RTOResolver:
         self.document = normalized_document
         self.rto_records = self._load_rto_records()
 
-    def _load_rto_records(self):
+    def _load_rto_records(self) -> list[dict[str, Any]]:
         sheets = self.document.get("sheets", {})
         table = sheets.get(self.RTO_SHEET)
 
@@ -31,7 +33,14 @@ class RTOResolver:
                 f"RTO mapping sheet not found: {self.RTO_SHEET}"
             )
 
-        return table.get("records", [])
+        records = table.get("records", [])
+
+        if not isinstance(records, list):
+            raise ValueError(
+                f"Invalid records structure in sheet: {self.RTO_SHEET}"
+            )
+
+        return records
 
     def resolve(
         self,
@@ -39,35 +48,43 @@ class RTOResolver:
         vehicle_category: str,
     ) -> dict[str, Any]:
 
-        if vehicle_category not in self.PRODUCT_COLUMN_MAPPING:
-            return {
-                "status": "unsupported_category",
-                "rto_code": rto_code,
-                "vehicle_category": vehicle_category,
-                "cluster": None,
-                "evidence": None,
-            }
+        normalized_rto = self._normalize_rto(rto_code)
+
+        if not normalized_rto:
+            return self._build_result(
+                status="invalid_rto",
+                rto_code=rto_code,
+                vehicle_category=vehicle_category,
+            )
+
+        normalized_category = (
+            vehicle_category.strip().lower()
+            if isinstance(vehicle_category, str)
+            else ""
+        )
+
+        if normalized_category not in self.PRODUCT_COLUMN_MAPPING:
+            return self._build_result(
+                status="unsupported_category",
+                rto_code=rto_code,
+                vehicle_category=vehicle_category,
+            )
 
         target_column = self.PRODUCT_COLUMN_MAPPING[
-            vehicle_category
+            normalized_category
         ]
 
         for record in self.rto_records:
             fields = record.get("fields", {})
 
-            rto_field = self._find_field(
-                fields,
-                "rto_code",
-            )
+            rto_field = self._find_field(fields, "rto_code")
 
-            if not rto_field:
+            if rto_field is None:
                 continue
 
-            source_rto = rto_field.get("normalized_value")
-            if source_rto is None:
-                source_rto = rto_field.get("raw_value")
+            source_rto = self._get_field_value(rto_field)
 
-            if str(source_rto).strip().upper() != rto_code.strip().upper():
+            if self._normalize_rto(source_rto) != normalized_rto:
                 continue
 
             cluster_field = self._find_field(
@@ -75,65 +92,115 @@ class RTOResolver:
                 target_column,
             )
 
-            if not cluster_field:
-                return {
-                    "status": "mapping_column_missing",
-                    "rto_code": rto_code,
-                    "vehicle_category": vehicle_category,
-                    "cluster": None,
-                    "evidence": None,
-                }
+            if cluster_field is None:
+                return self._build_result(
+                    status="mapping_column_missing",
+                    rto_code=rto_code,
+                    vehicle_category=normalized_category,
+                    record=record,
+                )
 
-            cluster = cluster_field.get("normalized_value")
-            if cluster is None:
-                cluster = cluster_field.get("raw_value")
+            cluster = self._get_field_value(cluster_field)
 
-            source = cluster_field.get("source", {})
+            evidence = self._build_evidence(
+                record,
+                cluster_field,
+            )
 
-            if cluster is None or str(cluster).strip() == "":
-                return {
-                    "status": "cluster_not_available",
-                    "rto_code": rto_code,
-                    "vehicle_category": vehicle_category,
-                    "cluster": None,
-                    "evidence": {
-                        "sheet": self.RTO_SHEET,
-                        "row": record.get("source_row"),
-                        "cells": source.get("cell_coordinates", []),
-                    },
-                }
+            if cluster is None or not str(cluster).strip():
+                return self._build_result(
+                    status="cluster_not_available",
+                    rto_code=rto_code,
+                    vehicle_category=normalized_category,
+                    record=record,
+                    evidence=evidence,
+                )
 
-            return {
-                "status": "resolved",
-                "rto_code": rto_code,
-                "vehicle_category": vehicle_category,
-                "cluster": cluster,
-                "evidence": {
-                    "source_id": record.get("source_id"),
-                    "sheet": self.RTO_SHEET,
-                    "row": record.get("source_row"),
-                    "cells": source.get("cell_coordinates", []),
-                },
+            return self._build_result(
+                status="resolved",
+                rto_code=rto_code,
+                vehicle_category=normalized_category,
+                cluster=str(cluster).strip(),
+                record=record,
+                evidence=evidence,
+            )
+
+        return self._build_result(
+            status="not_found",
+            rto_code=rto_code,
+            vehicle_category=normalized_category,
+        )
+
+    @staticmethod
+    def _normalize_rto(value: Any) -> str:
+        """Normalize RTO codes while preserving meaningful characters."""
+        if value is None:
+            return ""
+
+        return re.sub(r"\s+", "", str(value)).upper()
+
+    @staticmethod
+    def _get_field_value(field: dict[str, Any]) -> Any:
+        """Prefer normalized value, falling back to raw value."""
+        value = field.get("normalized_value")
+
+        if value is None:
+            value = field.get("raw_value")
+
+        return value
+
+    @staticmethod
+    def _build_evidence(
+        record: dict[str, Any],
+        field: dict[str, Any],
+    ) -> dict[str, Any]:
+        source = field.get("source") or {}
+
+        return {
+            "source_id": record.get("source_id"),
+            "sheet": RTOResolver.RTO_SHEET,
+            "row": record.get("source_row"),
+            "cells": source.get("cell_coordinates", []),
+        }
+
+    @staticmethod
+    def _build_result(
+        status: str,
+        rto_code: str,
+        vehicle_category: str,
+        cluster: Any = None,
+        record: dict[str, Any] | None = None,
+        evidence: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        if evidence is None and record is not None:
+            evidence = {
+                "source_id": record.get("source_id"),
+                "sheet": RTOResolver.RTO_SHEET,
+                "row": record.get("source_row"),
+                "cells": [],
             }
 
         return {
-            "status": "not_found",
+            "status": status,
             "rto_code": rto_code,
             "vehicle_category": vehicle_category,
-            "cluster": None,
-            "evidence": None,
+            "cluster": cluster,
+            "evidence": evidence,
         }
 
     @staticmethod
     def _find_field(
         fields: dict[str, Any],
         canonical_name: str,
-    ):
+    ) -> dict[str, Any] | None:
         for field in fields.values():
-            if field.get("canonical_name") == canonical_name:
-                return field
+            if not isinstance(field, dict):
+                continue
 
-            if field.get("source_header") == canonical_name:
+            if (
+                field.get("canonical_name") == canonical_name
+                or field.get("source_header") == canonical_name
+            ):
                 return field
 
         return None
