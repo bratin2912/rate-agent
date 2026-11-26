@@ -1,19 +1,23 @@
 
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
+
 from app.api.health import router as health_router
+from app.api.policies import router as policies_router
+from app.database.init_db import initialize_database
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    initialize_database()
+    yield
+
 
 app = FastAPI(
-    title="Insurance Rater API",
-    description="AI-powered motor insurance commission rating application",
-    version="1.0.0"
+    title="Insurance Rater Agent",
+    lifespan=lifespan,
 )
 
-app.include_router(health_router, prefix="/api/v1")
-
-
-@app.get("/")
-def root():
-    return {
-        "message": "Welcome to Insurance Rater API",
-        "status": "running"
-    }
+app.include_router(health_router)
+app.include_router(policies_router)
