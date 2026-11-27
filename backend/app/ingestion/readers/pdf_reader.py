@@ -10,13 +10,14 @@ logger = get_logger(__name__)
 
 
 class PDFReader:
-    """Extract text from native and scanned PDF documents."""
+    """Extract text and structured tables from PDF documents."""
 
     OCR_LANGUAGE = "eng"
     OCR_DPI = 300
     MIN_NATIVE_TEXT_LENGTH = 20
 
     def extract_text(self, file_path: str) -> list[dict]:
+        """Extract text from native and scanned PDF documents."""
         path = Path(file_path)
 
         if not path.exists():
@@ -104,3 +105,69 @@ class PDFReader:
             raise ValueError("PDF contains no pages.")
 
         return pages
+
+    def extract_tables(self, file_path: str) -> list[dict]:
+        """
+        Extract structured tables from native PDF pages.
+
+        Returns:
+            A list of tables containing:
+            - page_number
+            - table_number
+            - bbox
+            - rows
+
+        Note:
+            This method currently handles native PDF tables.
+            Scanned-table OCR reconstruction is not included.
+        """
+        path = Path(file_path)
+
+        if not path.exists():
+            raise FileNotFoundError(f"PDF not found: {file_path}")
+
+        if path.suffix.lower() != ".pdf":
+            raise ValueError("Only PDF files are supported.")
+
+        extracted_tables = []
+
+        try:
+            with pymupdf.open(path) as document:
+                if document.is_encrypted:
+                    raise ValueError("Encrypted PDFs are not supported.")
+
+                for page_number, page in enumerate(document, start=1):
+                    table_finder = page.find_tables()
+
+                    for table_number, table in enumerate(
+                        table_finder.tables,
+                        start=1,
+                    ):
+                        rows = table.extract()
+
+                        if not rows:
+                            continue
+
+                        extracted_tables.append({
+                            "page_number": page_number,
+                            "table_number": table_number,
+                            "bbox": list(table.bbox),
+                            "rows": rows,
+                        })
+
+                        logger.info(
+                            "PDF table extracted | page=%s | table=%s | rows=%s",
+                            page_number,
+                            table_number,
+                            len(rows),
+                        )
+
+        except pymupdf.FileDataError as exc:
+            raise ValueError("Invalid or corrupted PDF file.") from exc
+
+        logger.info(
+            "PDF table extraction completed | tables=%s",
+            len(extracted_tables),
+        )
+
+        return extracted_tables

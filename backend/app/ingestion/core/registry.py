@@ -1,10 +1,13 @@
 
 from app.ingestion.core.profile_models import SourceProfile
+
 from app.ingestion.profiles.godigit.source import PROFILE as GODIGIT_PROFILE
+from app.ingestion.profiles.hdfc_ergo.source import PROFILE as HDFC_ERGO_PROFILE
 
 
 PROFILES: dict[str, SourceProfile] = {
     GODIGIT_PROFILE.source_id: GODIGIT_PROFILE,
+    HDFC_ERGO_PROFILE.source_id: HDFC_ERGO_PROFILE,
 }
 
 
@@ -26,6 +29,9 @@ def get_profile(source_id: str) -> SourceProfile:
 def register_profile(profile: SourceProfile) -> None:
     """
     Register a source profile.
+
+    Raises:
+        ValueError: If the source ID is already registered.
     """
     if profile.source_id in PROFILES:
         raise ValueError(
